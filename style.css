@@ -1,0 +1,750 @@
+/* ========================================================
+   Hostel Lost & Found - CSS Stylesheet
+   Simple and clean styling for Web Programming Project
+   ======================================================== */
+
+/* Reset and basic setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+  line-height: 1.6;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ========================================================
+   Header & Navigation Bar
+   ======================================================== */
+header {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #d0e1fd;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #004494;
+  text-decoration: none;
+}
+
+/* ========================================================
+   Hero / Banner Section
+   ======================================================== */
+.hero-section {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 25px 20px;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 24px;
+  color: #0056b3;
+  margin-bottom: 8px;
+}
+
+.hero-section p {
+  color: #666666;
+  font-size: 15px;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+}
+
+/* Stats Counter Box */
+.stats-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background-color: #eef3f9;
+  border: 1px solid #d4e0ee;
+  border-radius: 6px;
+  padding: 12px 25px;
+  min-width: 140px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #555555;
+  text-transform: uppercase;
+}
+
+/* ========================================================
+   Search & Filter Section
+   ======================================================== */
+.search-section {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 25px;
+}
+
+.search-bar-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.search-select {
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* Category Filter Buttons */
+.category-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.filter-btn {
+  background-color: #e9ecef;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #dde2e6;
+}
+
+.filter-btn.active {
+  background-color: #0056b3;
+  color: #ffffff;
+  border-color: #0056b3;
+}
+
+/* ========================================================
+   Notice Board Cards Section
+   ======================================================== */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.board-header h2 {
+  font-size: 20px;
+  color: #222222;
+}
+
+/* Grid layout for items */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.item-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Status Badges */
+.badge {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+.tag-lost {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.tag-found {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.card-id {
+  font-size: 12px;
+  color: #888888;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.card-details {
+  background-color: #f9fbfd;
+  border: 1px solid #eef2f7;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.card-details p {
+  margin: 3px 0;
+  color: #555555;
+}
+
+.card-details strong {
+  color: #333333;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #444444;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  border-top: 1px solid #eeeeee;
+  padding-top: 12px;
+}
+
+/* Buttons */
+.btn {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: #0056b3;
+  border: 1px solid #0056b3;
+  flex: 1;
+}
+
+.btn-outline:hover {
+  background-color: #f0f7ff;
+}
+
+.btn-delete {
+  background-color: #ffffff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.btn-delete:hover {
+  background-color: #ffebee;
+}
+
+.btn-reset {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-reset:hover {
+  background-color: #5a6268;
+}
+
+/* Empty message when search has 0 results */
+.empty-message {
+  grid-column: 1 / -1;
+  background-color: #ffffff;
+  border: 1px dashed #cccccc;
+  border-radius: 6px;
+  padding: 30px;
+  text-align: center;
+  color: #666666;
+}
+
+/* ========================================================
+   Report Item Form Section
+   ======================================================== */
+.form-section {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 25px 20px;
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  font-size: 20px;
+  color: #0056b3;
+  margin-bottom: 6px;
+}
+
+.form-section p.section-sub {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 4px rgba(0, 86, 179, 0.25);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Radio buttons container */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  padding: 4px 0;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.radio-option input {
+  cursor: pointer;
+}
+
+/* 2-Column form grid */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #28a745;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 11px;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background-color: #218838;
+}
+
+/* ========================================================
+   How It Works Section
+   ======================================================== */
+.how-section {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 25px 20px;
+  margin-bottom: 30px;
+}
+
+.how-section h2 {
+  font-size: 20px;
+  color: #222222;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.step-card {
+  background-color: #fbfbfb;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+}
+
+.step-num {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background-color: #0056b3;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.step-card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #333333;
+}
+
+.step-card p {
+  font-size: 13px;
+  color: #666666;
+}
+
+/* ========================================================
+   Footer
+   ======================================================== */
+footer {
+  background-color: #333333;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/* ========================================================
+   Responsive Media Queries
+   ======================================================== */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* ========================================================
+   Enhanced Styles: MySQL Status, Badges, Modals, & Toasts
+   ======================================================== */
+.db-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.db-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #28a745;
+  box-shadow: 0 0 6px #28a745;
+  display: inline-block;
+}
+
+.db-dot.disconnected {
+  background-color: #ffc107;
+  box-shadow: 0 0 6px #ffc107;
+}
+
+.tag-claimed {
+  background-color: #e2e3e5;
+  color: #383d41;
+  border: 1px solid #d6d8db;
+}
+
+.item-card.is-claimed {
+  opacity: 0.85;
+  border-left: 4px solid #6c757d;
+}
+
+.item-card:not(.is-claimed) {
+  border-left: 4px solid #0056b3;
+}
+
+.item-card.is-claimed .card-title {
+  text-decoration: line-through;
+  color: #666;
+}
+
+/* Toast Notification */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  animation: slideIn 0.3s ease;
+}
+
+.toast.success {
+  background-color: #1e7e34;
+}
+
+.toast.info {
+  background-color: #0056b3;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: modalScale 0.2s ease;
+}
+
+@keyframes modalScale {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+  color: #222222;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888888;
+}
+
+.modal-close:hover {
+  color: #111111;
+}
+
+.modal-body {
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.6;
+}
+
+.contact-highlight-box {
+  background-color: #e8f4fd;
+  border: 1px dashed #b6dcfb;
+  border-radius: 6px;
+  padding: 14px;
+  margin: 15px 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 15px;
+  grid-column: 1 / -1;
+}
+

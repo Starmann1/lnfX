@@ -1,0 +1,16 @@
+# Local Configuration & Credentials
+api/config.local.php
+*.local.php
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# IDE & Editors
+.vscode/
+.idea/
